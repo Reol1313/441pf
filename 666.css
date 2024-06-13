@@ -1,3 +1,4 @@
+//Shangwenmin Reol
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f7f7f7;
@@ -250,20 +251,19 @@ p {
 
 
 
-/* 重置一些基本的样式 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 设置页面的基本字体和背景 */
+/* Set the basic font and background of the page */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-/* 标题样式 */
+/* Title Style */
 header h1 {
   text-align: center;
   padding: 20px 0;
@@ -271,7 +271,7 @@ header h1 {
   color: #fff;
 }
 
-/* 导航栏样式 */
+/* Navigation Bar Style */
 nav ul {
   list-style: none;
   padding: 0;
@@ -280,7 +280,7 @@ nav ul {
   text-align: center;
 }
 
-/* 导航链接样式 */
+/* Navigation Link Style */
 nav ul li {
   display: inline-block;
   position: relative;
@@ -295,12 +295,12 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-/* 鼠标悬停在导航链接上时的样式 */
+/* Style when hovering over navigation links */
 nav ul li a:hover, nav ul li a:focus {
   background-color: #555;
 }
 
-/* 下拉菜单样式 */
+/* Dropdown menu style */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -312,12 +312,12 @@ nav ul li a:hover, nav ul li a:focus {
   z-index: 1;
 }
 
-/* 下拉菜单列表项样式 */
+/* Dropdown menu list item style */
 .dropdown-menu li {
   clear: both;
 }
 
-/* 下拉菜单链接样式 */
+/* Dropdown menu link style */
 .dropdown-menu li a {
   padding: 10px 20px;
   color: #333;
@@ -326,17 +326,17 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #ffffff;
 }
 
-/* 鼠标悬停在下拉菜单链接上时的样式 */
+/* Style when hovering over dropdown menu links */
 .dropdown-menu li a:hover {
   background-color: #e9e9e9;
 }
 
-/* 当鼠标悬停在下拉触发器上时显示下拉菜单 */
+/* Display dropdown menu when hovering over a dropdown trigger with the mouse */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* 容器样式 */
+/* Container Style*/
 .container {
   width: 80%;
   margin: 20px auto;
@@ -345,16 +345,16 @@ nav ul li a:hover, nav ul li a:focus {
   justify-content: space-between;
 }
 
-/* 课程样式 */
+/* Course Style */
 .course {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 20px;
   margin-bottom: 20px;
-  width: 48%; /* 根据需要调整宽度 */
+  width: 48%; /* Adjust the width as needed */
 }
 
-/* 购物车样式 */
+/* Shopping Cart Style */
 .shopping-cart {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -362,7 +362,7 @@ nav ul li a:hover, nav ul li a:focus {
   margin-bottom: 20px;
 }
 
-/* 按钮样式 */
+/* Button Style */
 .button {
   display: inline-block;
   padding: 10px 15px;
@@ -378,14 +378,14 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #4cae4c;
 }
 
-/* 表单输入框样式 */
+/* Form Input Box Style */
 .quantity-input {
   padding: 10px;
   margin-right: 10px;
-  width: calc(100% - 132px); /* 根据按钮宽度调整 */
+  width: calc(100% - 132px); /* Adjust according to button width */
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
   .container {
       flex-direction: column;
@@ -419,41 +419,42 @@ h1, h2 {
 }
 .entrance-text1 {
   position: relative;
-  left: -100%; /* 开始时，文字完全在屏幕外 */
-  animation: entrance 2s forwards; /* forwards确保动画完成后保持最终状态 */
+  left: -100%; /* At the beginning, the text is completely outside the screen */
+  animation: entrance 2s forwards; /* forwards Ensure that the animation remains in its final state after completion */
     color: #007bff; 
 }
 
 
 @keyframes entrance {
   to {
-    left: 0; /* 动画结束时，文字移动到原始位置 */
+    left: 0; /* At the end of the animation, the text moves to its original position */
   }
 }
 
 .entrance-text {
   position: relative;
-  left: -100%; /* 开始时，文字完全在屏幕外 */
-  animation: entrance 2s forwards; /* forwards确保动画完成后保持最终状态 */
+  left: -100%; 
+  animation: entrance 2s forwards; 
 }
 
 
 @keyframes entrance {
   to {
-    left: 0; /* 动画结束时，文字移动到原始位置 */
+    left: 0; 
   }
 }
 .entrance-text2 {
   position: relative;
-  left: -100%; /* 开始时，文字完全在屏幕外 */
-  animation: entrance 2s forwards; /* forwards确保动画完成后保持最终状态 */
-  font-weight: bold; /* 将字体设置为加粗 */
+  left: -100%; 
+  animation: entrance 2s forwards; 
+  font-weight: bold; 
   color: #007bff; 
 }
 
 
 @keyframes entrance {
   to {
-    left: 0; /* 动画结束时，文字移动到原始位置 */
+    left: 0; 
   }
 }
+//Shangwenmin Reol
