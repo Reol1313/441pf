@@ -1,3 +1,4 @@
+//Shangwenmin Reol
 const addButton = document.querySelectorAll('.add');
 const cartTable = document.getElementById('cart-table');
 const cartTotal = document.getElementById('cart-total');
@@ -207,10 +208,10 @@ function performCalculation(operator, a, b) {
         return true;
     }
     var loginBtn = document.getElementById('login-btn');
-console.log(loginBtn); // 检查是否为 null
+console.log(loginBtn); // Check if it is null
 if (loginBtn) {
   loginBtn.addEventListener('click', function() {
-    // 事件处理器逻辑
+    // Event processor logic
   });
 } else {
   console.error('Element with ID "login-btn" not found');
