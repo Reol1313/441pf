@@ -1,100 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册与登录页面</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .bg111 {
+      width: 100%;
+      height: 100%;
+      background-image: url('img/b9f672ff3805edddf42a1a199fef51fad319fe623b88c2-DMbGuY.jfif');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #main {
+      width: 300px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      background-color: #5cb85c;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-group a {
+      color: #5cb85c;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-     
-  <!DOCTYPE html> 
-  <html lang="en"> 
-  <head> 
-  <meta charset="UTF-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Document</title> 
-  <link rel="stylesheet" href="666.css"> 
-  </head> 
-  <body> 
-  <header>  
-  <h1>Login&Sign up</h1> 
-  </header>  
-  Login&Sign up 
-  <nav> 
-  <ul> 
-  <li>Home</li> 
-  <li class="dropdown"> 
-  Project 
-  <ul class="dropdown-menu"> 
-  <li>Project 1</li> 
-  <li>Project 2</li> 
-  <li>Project 3</li> 
-  </ul> 
-  </li> 
-  <li>About</li> 
-  <li>Courseware</li> 
-  <li>Enquiry</li> 
-  <li>Showcase</li> 
-  </ul> 
-  </nav> 
-  <div class="page1"> 
-  <div class="div2"> 
-  <div class="user1"> 
-  <h3 align="center">User Login</h3> 
-  <div class="user2"> 
-  <div class="user3">Username 
-  <label class="item-lable" for="username"></label> 
-  <input class="item-content" type="text" name="username" placeholder="Please enter username" id="username"> 
-  </div> 
-  <div class="user3">Password &nbsp;&nbsp; 
-  <label class="item-lable" for="password"></label> 
-  <input class="item-content" type="password" name="password" placeholder="Please enter Password" id="password"> 
-  </div> 
-  <button class="submit" id="login-btn">Login</button> 
-  </div> 
-  </div> 
-  </div> 
-  </div> 
-
-
-  <div id="todo-app">
-    <h2>My To-Do List</h2>
-    <input type="text" id="new-task" placeholder="Add a new task...">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="task-list">
-        <li>We are always here to help you take the next step in your IT education journey</li>
-    </ul>
-</div>
-<div class="calculator">
-   <input type="text" id="display" readonly>
-    <div class="buttons">
-        <button onclick="append('1')">1</button>
-        <button onclick="append('2')">2</button>
-        <button onclick="append('3')">3</button>
-        <button onclick="append('+')">+</button>
-        <button onclick="append('4')">4</button>    
-        <button onclick="append('5')">5</button>
-        <button onclick="append('6')">6</button>
-        <button onclick="append('-')">-</button>
-        <button onclick="append('7')">7</button>
-        <button onclick="append('8')">8</button>
-        <button onclick="append('9')">9</button>
-        <button onclick="append('*')">*</button>
-        <button onclick="append('0')">0</button>
-        <button onclick="append('.')">.</button>
-        <button onclick="calculate()">=</button>
-
-        <button onclick="clearDisplay()">C</button>
+  <div class="bg111">
+    <div id="main">
+      <form id="registerForm" class="main-form" onsubmit="return handleRegister()">
+        <h2>注册</h2>
+        <div class="form-group">
+          <label for="username">账号:</label>
+          <input type="text" id="username" name="username" required minlength="3" maxlength="10">
+        </div>
+        <div class="form-group">
+          <label for="password">密码:</label>
+          <input type="password" id="password" name="password" required minlength="5" maxlength="15">
+        </div>
+        <div class="form-group button-1">
+          <button type="submit">注册</button>
+        </div>
+      </form>
+      <div class="login-form">
+        <h2>登录</h2>
+        <div class="form-group button-1">
+          <button onclick="handleLogin()">登录</button>
+        </div>
+      </div>
     </div>
-</div>
-  <footer> 
-  <p>Copyright &copy; 2024 Reol All rights reserved.</p > 
-  </footer> 
-  <script src="12138.js">
-  </script> 
-  </body> 
-  </html> 
-   
+  </div>
+
+  <script>
+    function handleRegister() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        alert('账号和密码不能为空！');
+        return false;
+      }
+
+      setCookie('username', username, 7);
+      setCookie('password', password, 7);
+
+      alert('注册成功！');
+      return false;
+    }
+
+    function handleLogin() {
+      var username = getCookie('username');
+      if (username) {
+        // 假设登录成功，跳转到test.html页面
+        window.location.href = '欢迎页面.html';
+      } else {
+        alert('未检测到账号，请先注册！');
+      }
+    }
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/; SameSite=Strict";
+    }
+
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim().split('=');
+        if (cookie[0] === name) {
+          return decodeURIComponent(cookie[1]);
+        }
+      }
+      return null;
+    }
+
+    function eraseCookie(name) {
+      document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
+    }
+  </script>
 </body>
 </html>
