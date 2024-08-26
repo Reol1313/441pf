@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>注册与登录页面</title>
+  <title>Registration and login page</title>
   <style>
     body, html {
       height: 100%;
@@ -61,23 +61,23 @@
   <div class="bg111">
     <div id="main">
       <form id="registerForm" class="main-form" onsubmit="return handleRegister()">
-        <h2>注册</h2>
+        <h2>register</h2>
         <div class="form-group">
-          <label for="username">账号:</label>
+          <label for="username">account number:</label>
           <input type="text" id="username" name="username" required minlength="3" maxlength="10">
         </div>
         <div class="form-group">
-          <label for="password">密码:</label>
+          <label for="password">password:</label>
           <input type="password" id="password" name="password" required minlength="5" maxlength="15">
         </div>
         <div class="form-group button-1">
-          <button type="submit">注册</button>
+          <button type="submit">register</button>
         </div>
       </form>
       <div class="login-form">
-        <h2>登录</h2>
+        <h2>log on</h2>
         <div class="form-group button-1">
-          <button onclick="handleLogin()">登录</button>
+          <button onclick="handleLogin()">log on</button>
         </div>
       </div>
     </div>
@@ -89,24 +89,24 @@
       var password = document.getElementById('password').value;
 
       if (!username || !password) {
-        alert('账号和密码不能为空！');
+        alert('Account and password cannot be empty！');
         return false;
       }
 
       setCookie('username', username, 7);
       setCookie('password', password, 7);
 
-      alert('注册成功！');
+      alert('login was successful！');
       return false;
     }
 
     function handleLogin() {
       var username = getCookie('username');
       if (username) {
-        // 假设登录成功，跳转到test.html页面
+        // Assuming successful login, redirect to the test. html page
         window.location.href = 'courseware.html';
       } else {
-        alert('未检测到账号，请先注册！');
+        alert('Account not detected, please register first！');
       }
     }
 
