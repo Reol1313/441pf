@@ -1,4 +1,4 @@
-
+/shangwenmin reol/
 // set cookie
 function setCookie(name, value, days) {
     var expires = "";
@@ -41,3 +41,4 @@ function junpFun (){
       },500)
     }
   }
+/shangwenmin reol/
