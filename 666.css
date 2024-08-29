@@ -1,4 +1,3 @@
-//Shangwenmin Reol
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f7f7f7;
@@ -251,6 +250,7 @@ p {
 
 
 
+/* Reset some basic styles */
 * {
   margin: 0;
   padding: 0;
@@ -263,7 +263,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Title Style */
+/* Heading Style */
 header h1 {
   text-align: center;
   padding: 20px 0;
@@ -271,7 +271,7 @@ header h1 {
   color: #fff;
 }
 
-/* Navigation Bar Style */
+/* Navigation bar style */
 nav ul {
   list-style: none;
   padding: 0;
@@ -280,7 +280,7 @@ nav ul {
   text-align: center;
 }
 
-/* Navigation Link Style */
+/* Navigation link style */
 nav ul li {
   display: inline-block;
   position: relative;
@@ -295,12 +295,12 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-/* Style when hovering over navigation links */
+/* Style when hovering over navigation links with the mouse */
 nav ul li a:hover, nav ul li a:focus {
   background-color: #555;
 }
 
-/* Dropdown menu style */
+/* Drop down menu style */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -317,7 +317,7 @@ nav ul li a:hover, nav ul li a:focus {
   clear: both;
 }
 
-/* Dropdown menu link style */
+/* Pull down menu link style */
 .dropdown-menu li a {
   padding: 10px 20px;
   color: #333;
@@ -326,17 +326,17 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #ffffff;
 }
 
-/* Style when hovering over dropdown menu links */
+/* Style when hovering over a dropdown menu link with the mouse */
 .dropdown-menu li a:hover {
   background-color: #e9e9e9;
 }
 
-/* Display dropdown menu when hovering over a dropdown trigger with the mouse */
+/* Display dropdown menu when hovering over the dropdown trigger */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Container Style*/
+/* Container Style */
 .container {
   width: 80%;
   margin: 20px auto;
@@ -354,7 +354,7 @@ nav ul li a:hover, nav ul li a:focus {
   width: 48%; /* Adjust the width as needed */
 }
 
-/* Shopping Cart Style */
+/* Shopping cart style */
 .shopping-cart {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -362,7 +362,7 @@ nav ul li a:hover, nav ul li a:focus {
   margin-bottom: 20px;
 }
 
-/* Button Style */
+/* button */
 .button {
   display: inline-block;
   padding: 10px 15px;
@@ -378,14 +378,14 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #4cae4c;
 }
 
-/* Form Input Box Style */
+/* Form input box style */
 .quantity-input {
   padding: 10px;
   margin-right: 10px;
   width: calc(100% - 132px); /* Adjust according to button width */
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
       flex-direction: column;
@@ -420,7 +420,7 @@ h1, h2 {
 .entrance-text1 {
   position: relative;
   left: -100%; /* At the beginning, the text is completely outside the screen */
-  animation: entrance 2s forwards; /* forwards Ensure that the animation remains in its final state after completion */
+  animation: entrance 2s forwards; /* forwardsEnsure that the animation maintains its final state after completion */
     color: #007bff; 
 }
 
@@ -433,8 +433,8 @@ h1, h2 {
 
 .entrance-text {
   position: relative;
-  left: -100%; 
-  animation: entrance 2s forwards; 
+  left: -100%; /* At the beginning, the text is completely outside the screen */
+  animation: entrance 2s forwards; /* forwardsEnsure that the animation maintains its final state after completion */
 }
 
 
@@ -447,14 +447,14 @@ h1, h2 {
   position: relative;
   left: -100%; 
   animation: entrance 2s forwards; 
-  font-weight: bold; 
+  font-weight: bold; /* Set the font to bold */
   color: #007bff; 
 }
 
 
 @keyframes entrance {
   to {
-    left: 0; 
+    left: 0;  
   }
 }
 html, body {
@@ -467,22 +467,356 @@ body {
   flex-direction: column;
 }
 
+/* Containers are used for central content to ensure that the content does not overflow */
 .container {
   flex: 1;
-  padding-bottom: 60px; 
+  padding-bottom: 60px; /* The height here should be greater than the height of the footer */
 }
 
+/* footer 样式 */
 footer {
   width: 100%; 
   background-color: #333; 
   color: white; 
   text-align: center; 
   padding: 1em; 
-  position: relative;
+  position: relative; 
   bottom: 0; 
 }
 
 footer p {
   margin: 0;
 }
-//Shangwenmin Reol
+
+ .demonstration {
+  color: var(--el-text-color-secondary);
+  }
+
+  .el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+  text-align: center;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+  }
+  
+  /* TOP栏 */
+  .el-link {
+    margin-right: 8px;
+  }
+  .el-link .el-icon--right.el-icon {
+    vertical-align: text-bottom;
+  }
+
+
+  .el-col {
+        text-align: center;
+      }
+
+
+
+      #container {
+        height: 650px; /* To demonstrate the scrolling effect, the page needs to be long enough */
+        position: relative;
+        /* background: rgb(243, 175, 175); */
+      }
+      .imageContainer {
+        left: 2.5%;
+        position: absolute;
+        top: 70px; 
+        opacity: 0; 
+        transition: top 1.75s ease, opacity 2s ease; 
+        display: flex;
+        justify-content: center;
+      }
+      .movingImage {
+        flex: 1;
+        width: 400px;
+        height: 450px;
+        margin-right: 5px; 
+        margin-left: 5px; 
+      }    
+      .IMG2 {
+        
+        width: 350px;
+        height: 350px;
+        
+      }    
+      .T1{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-weight: bold;
+        font-size: 45px;
+        /* width: 400px; */
+        display: block;
+        color: aliceblue;
+        text-shadow: 2px 2px 5px rgb(201, 72, 72);
+      }
+      .T2{
+        position: absolute;
+        left: 160px;
+        top: 40px;
+        text-shadow: 2px 2px 5px rgb(201, 72, 72);
+        font-weight: bold;
+        font-size: 20px;
+        color: aliceblue;
+        /* width: 400px; */
+        display: block;
+      }
+      .ZXBOX{
+        color: white;
+        position: absolute;
+        right: 30px;
+        top: 10px;
+      
+      }
+      .ZXBUTTON{
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+        width: 50px;
+        height: 30px;
+        color: rgb(201, 72, 72);
+      }
+      ul.nav{
+          margin: 0 auto;
+          display: flex;
+      }
+      ul.nav li{
+          flex: 1;
+          width: 100px;
+          list-style: none;
+          padding: 10px;
+          text-align: center;
+          line-height: 35px;
+      
+      }
+      ul.nav li a{
+          font-weight: bold;
+          font-size: 20px;
+          text-decoration: none;
+          padding:10px; ;
+          color:rgb(255, 255, 255);
+          box-sizing: border-box;
+      }
+      ul.nav li a:hover,ul.nav li a.current{
+          color: #007cc4;
+          border-radius: 5px;
+          background: #ffffff;
+      }
+      
+      #TITLEO{
+          height: 940px;
+          background-color: rgb(255, 255, 255);
+      }
+      .TITLE_LINK{
+          position: absolute;
+          left: 700px;
+          top: 30px;
+      }
+      .DIV_SPAN{
+          font-size: 25px;
+          font-weight: bold;
+      }
+      .TITLET{
+          position: relative;
+          height: 100px;
+          /* padding-top: 10px; */
+          
+          background-position: center;
+          background-image: url(./img/276231e9da17865.jpg);
+          /* background: linear-gradient(to bottom, rgba(107, 175, 240, 0.5), rgb(129, 129, 129)); */
+          box-shadow: 2px 5px  5px black;
+          }
+      .P1NAME{
+          font-size: 18px;
+          font-weight: bold;
+      }
+      .TWO-CON{
+            padding-top: 80px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+      }
+      .THREE-CON{
+          height: 600px;
+          background-color: bisque;
+      }
+      .FOUR-CON{
+          display: block;
+          margin: auto;
+          width: 95%;
+          height: 250px;
+          background-color: rgb(255, 255, 255);
+      }
+      
+    /*Statistics*/
+      .el-statistic__head{
+        color: rgb(37, 37, 37) !important;
+        font-size: 30px !important;
+        font-weight: bold ;
+      }
+      
+      .el-statistic__number {
+        color: rgb(255, 72, 0) !important;
+        font-size: 35px !important;
+        /* font-weight: bold ; */
+      }
+      
+      /*Third line classification*/
+      .FL_Title{
+        font-weight: bold;
+        font-size: 17px;
+      }
+      /*Title of classification*/
+      .T3{
+        position: absolute;
+        /* margin-bottom: 40px; */
+        text-align: center;
+        left: 43%;
+        top: -70px; /*The initial position is outside the bottom*/
+        opacity: 0; /*Initial transparency is 0*/
+        transition: top 1.75s ease, opacity 2s ease;
+      }
+      .T32{
+        position: absolute;
+        /* margin-bottom: 40px; */
+        text-align: center;
+        left: 43%;
+        top: -70px; /* The initial position is outside the bottom */
+        opacity: 0; 
+        transition: top 1.75s ease, opacity 2s ease; 
+      }
+      .FL_SPAN1{
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .FL_SPAN2{
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(65, 65, 65);
+      }
+      #container2{
+        height: 350px; /* To demonstrate the scrolling effect, the page needs to be long enough */
+        position: relative;
+        /* background: rgb(243, 175, 175); */
+      }
+      .imageContainer2 {
+        left: 2.5%;
+        position: absolute;
+        top: -160px; 
+        opacity: 0; 
+        transition: top 1.75s ease, opacity 2s ease; 
+        display: flex;
+        justify-content: center;
+      }
+      .movingImage {
+        flex: 1;
+        width: 400px;
+        height: 450px;
+        margin-right: 5px; 
+        margin-left: 5px;
+      }    
+      .IMG2 {
+        
+        width: 350px;
+        height: 350px;
+        
+      }  
+      /* .el-carousel__item{
+          color: #475669;
+          opacity: 1;
+          line-height: 200px;
+          margin: 0;
+          text-align: center;
+        }
+        
+        .el-carousel__item:nth-child(2n) {
+          background-color: #99a9bf;
+        }
+        
+        .el-carousel__item:nth-child(2n + 1) {
+          background-color: #d3dce6;
+        } */
+      
+      #el-collapse-head-0{
+        color: #007cc4;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #el-collapse-head-1{
+        color: #007cc4;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #el-collapse-head-2{
+        color: #007cc4;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #el-collapse-head-3{
+        color: #007cc4;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      
+      .f_zx{
+        
+        display: flex;
+        justify-content: space-between;
+      }
+      .f_zx p {
+        margin-left: 20px;
+      width: 815px;
+      font-size: 18px;
+      color: #FFF;
+      line-height: 175%;
+      }
+      
+      .f_zx a {
+        margin-right: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+      display: block;
+      width: 210px;
+      height: 60px;
+      background: #FFF;
+      border-radius: 10px;
+      color: rgb(155, 38, 18);
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
+      }
+      .bg_b{
+        position: relative;
+        width: 100%;
+        /* background: #c7901b; */
+        background-image: linear-gradient(to right, #c7901b, rgb(155, 38, 18));
+      }
+      .footerLeft{
+        position: relative;
+        color: #c0c0c0;
+        margin-left: 20px;
+      }
+      footer{
+        width: 100%;
+        background: url(./img/book2.jpg) no-repeat;
+        background-size: cover;
+      }
+      .footerBox{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        color: #fff;
+      }
+      /* .footerBox .footerRight{
+        
+      } */
