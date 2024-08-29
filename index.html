@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration and login page</title>
   <link rel="stylesheet" href="666.css">
+  <script src="common.js"></script>
   <body>
 <header>
-  <h1>Welcome Manzi Institute of Technology Website</h1>
+  <h1>Welcome RTO Website</h1>
 </header>
       <img src="1.png" alt="" style="width: 100px;height: 100px;position: relative;top: 0;left: 0;margin: 0;">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html">About</a></li>
-          <li><a href="index.html">Courseware</a></li>
+          <li><a href="javascript:junpFun()">Courseware</a></li>
           <li><a href="index.html">Enquiry</a></li>
           <li class="dropdown">
             <a href="#">Showcase</a>
@@ -107,6 +108,7 @@
     </div>
   </div>
 
+
   <script>
     function handleRegister() {
       var username = document.getElementById('username').value;
@@ -134,30 +136,6 @@
       }
     }
 
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/; SameSite=Strict";
-    }
-
-    function getCookie(name) {
-      var cookies = document.cookie.split(';');
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim().split('=');
-        if (cookie[0] === name) {
-          return decodeURIComponent(cookie[1]);
-        }
-      }
-      return null;
-    }
-
-    function eraseCookie(name) {
-      document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
-    }
   </script>
 </body>
 </html>
