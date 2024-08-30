@@ -807,11 +807,6 @@ footer p {
         color: #c0c0c0;
         margin-left: 20px;
       }
-      footer{
-        width: 100%;
-        background: url(./img/book2.jpg) no-repeat;
-        background-size: cover;
-      }
       .footerBox{
         display: flex;
         justify-content: space-between;
