@@ -241,10 +241,9 @@ function validateForm() {
   return true
 }
 var loginBtn = document.getElementById('login-btn')
-console.log(loginBtn) // 检查是否为 null
+console.log(loginBtn) 
 if (loginBtn) {
   loginBtn.addEventListener('click', function () {
-    // 事件处理器逻辑
   })
 } else {
   console.error('Element with ID "login-btn" not found')
@@ -252,7 +251,7 @@ if (loginBtn) {
 
 function updateCartTable() {
   const cartTable = document.getElementById('cart-table')
-  cartTable.innerHTML = '' // 清空表格
+  cartTable.innerHTML = '' 
   Object.values(cartItems).forEach((item) => {
     const row = document.createElement('tr')
     row.innerHTML = `
