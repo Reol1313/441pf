@@ -9,7 +9,7 @@ function updateTotalPrice() {
   var total = 0
   if (tr.length === 0) {
     cartTotal.innerHTML = total.toFixed(2)
-    return
+    return total.toFixed(2)
   }
   for (let index = 0; index < tr.length; index++) {
     const element = tr[index]
@@ -17,9 +17,10 @@ function updateTotalPrice() {
       .getElementsByTagName('td')[2]
       .innerHTML.replace('$', '')
     total += Number(currentPrice)
-    console.log(total)
+
     cartTotal.innerHTML = total.toFixed(2)
   }
+  return total.toFixed(2)
 }
 
 addButton.forEach((button, index) => {
@@ -56,7 +57,7 @@ addButton.forEach((button, index) => {
 })
 
 function checkout() {
-  alert(`Total amount to pay: $${totalPrice.toFixed(2)}`)
+  alert(`Total amount to pay: $${updateTotalPrice()}`)
   // Additional checkout logic can be added here
 }
 
