@@ -68,26 +68,14 @@ function clearCart() {
 }
 
 document.getElementById('login-btn').addEventListener('click', function () {
-  // 从网页元素获取用户名和密码
   var username = document.getElementById('username').value
   var password = document.getElementById('password').value
-
-  // 这里添加您的验证逻辑，例如与服务器进行比对等
-  // 以下仅为示例，假设用户名和密码正确时进行页面跳转
-
-  // 简单的验证示例（实际应用中不应如此处理密码验证）
   if (username && password) {
-    // 假设验证成功，跳转到课程页面
-    window.location.href = 'https://reol1313.github.io/441pf/courseware.html' // 替换为实际的课程页面URL
-    // 可以取消注释下面这行代码，并替换为实际的URL
-    // window.location.href = '实际的课程页面URL';
+    window.location.href = 'https://reol1313.github.io/441pf/courseware.html' 
   } else {
-    // 验证失败，给出提示
     alert('Invalid username or password')
   }
 })
-
-// set cookie
 function setCookie(name, value, days) {
   var expires = ''
   if (days) {
