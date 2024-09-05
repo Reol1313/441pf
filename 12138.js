@@ -302,9 +302,9 @@ function junpFun (){
         return true;
     }
   function submitForm(event) {
-    event.preventDefault(); // 阻止表单默认提交行为
-    if (validateForm()) { // 调用表单验证函数
-      window.location.href = 'thankyou.html'; // 导航到感谢页面
+    event.preventDefault(); 
+    if (validateForm()) { 
+      window.location.href = 'thankyou.html'; 
     }
   }
 
