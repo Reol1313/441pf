@@ -36,7 +36,7 @@
     </nav>
 <div class="form-container">
     <div class="entrance-text1">Enquiry Form</div>
-    <form name="enquiryForm" onsubmit="return validateForm()" method="post">
+    <form id="enquiryForm" onsubmit="submitForm(event)">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
