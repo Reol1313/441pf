@@ -1,45 +1,41 @@
-<form id="enquiryForm" onsubmit="submitForm(event)">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br><br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-  <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry Form</title>
+<link rel="stylesheet" href="666.css">
+<script src="12138.js"></script>
+    <style>
 
-<script>
-  function submitForm(event) {
-    event.preventDefault(); // 阻止表单默认提交行为
-    if (validateForm()) { // 调用表单验证函数
-      window.location.href = 'thankyou.html'; // 导航到感谢页面
-    }
-  }
-
-  function validateForm() {
-    var hasError = false;
-    var errorMessages = "";
-
-    var name = document.getElementById('name').value;
-    if (name == "") {
-      hasError = true;
-      errorMessages += "Please enter your name.\n";
-    }
-
-    var email = document.getElementById('email').value;
-    if (email == "") {
-      hasError = true;
-      errorMessages += "Please enter your email.\n";
-    } else {
-      var emailPattern = /\S+@\S+\.\S+/;
-      if (!emailPattern.test(email)) {
-        hasError = true;
-        errorMessages += "Please enter a valid email address.\n";
-      }
-    }
-
-    if (hasError) {
-      alert(errorMessages);
-      return false;
-    }
-    return true;
-  }
-</script>
+    </style>
+</head>
+<body>
+  <header>  
+    <h1>Thankyou</h1>
+</header>  
+<img src="logo.jpg" alt="" style="width: 100px;height: 100px;position: relative;top: 0;left: 0;margin: 0;">
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AU.html">About</a></li>
+      <li><a href="javascript:junpFun()">Courseware</a></li>
+      <li><a href="Enquiry.html">Enquiry</a></li>
+      <li class="dropdown">
+        <a href="#">Showcase</a>
+        <ul class="dropdown-menu">
+            <li><a href="showcase1.html">Showcase 1</a></li>
+            <li><a href="showcase2.html">Showcase 2</a></li>
+            <li><a href="showcase3.html">Showcase 3</a></li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+    <div class="container">
+        <h1>Thank you for your submission!</h1>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2024 Manzi Institute of Technology. All rights reserved.</p>
+  </footer>
+</body>
+</html>
