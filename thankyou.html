@@ -1,0 +1,45 @@
+<form id="enquiryForm" onsubmit="submitForm(event)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault(); // 阻止表单默认提交行为
+    if (validateForm()) { // 调用表单验证函数
+      window.location.href = 'thankyou.html'; // 导航到感谢页面
+    }
+  }
+
+  function validateForm() {
+    var hasError = false;
+    var errorMessages = "";
+
+    var name = document.getElementById('name').value;
+    if (name == "") {
+      hasError = true;
+      errorMessages += "Please enter your name.\n";
+    }
+
+    var email = document.getElementById('email').value;
+    if (email == "") {
+      hasError = true;
+      errorMessages += "Please enter your email.\n";
+    } else {
+      var emailPattern = /\S+@\S+\.\S+/;
+      if (!emailPattern.test(email)) {
+        hasError = true;
+        errorMessages += "Please enter a valid email address.\n";
+      }
+    }
+
+    if (hasError) {
+      alert(errorMessages);
+      return false;
+    }
+    return true;
+  }
+</script>
